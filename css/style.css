@@ -192,11 +192,18 @@ a, a:hover {
 
  /* ... added ... */
  .phd-text {
-  font-size: 1.25rem; /* Adjust this value to make it the size you prefer */
+  font-size: 1.05rem; /* Adjust this value to make it the size you prefer */
   color: #D63447;
   /* vertical-align: middle; This ensures the smaller text is aligned with the middle of the larger text */
 }
 
+.caption {
+  font-size: 14px;
+  color: #888;
+  padding: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+}
 
 
 
