@@ -190,6 +190,16 @@ a, a:hover {
   color: #D63447;
 }
 
+ /* ... added ... */
+ .phd-text {
+  font-size: 0.32em; /* Adjust this value to make it the size you prefer */
+  /* vertical-align: middle; This ensures the smaller text is aligned with the middle of the larger text */
+}
+
+
+
+
+
 .unslate_co--site-nav .site-nav-ul, .unslate_co--site-nav .site-nav-ul-none-onepage {
   text-align: center;
 }
