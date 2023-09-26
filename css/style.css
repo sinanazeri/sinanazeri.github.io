@@ -203,6 +203,7 @@ a, a:hover {
   padding: 10px 0;
   text-align: center;
   line-height: 1.5;
+  font-weight: bold;
 }
 
 
@@ -1011,11 +1012,13 @@ a, a:hover {
 
 .portfolio-item .portfolio-item-content, .blog-item .portfolio-item-content {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
+.portfolio-item-content p {
+  line-height: 1.5;
+}
 .portfolio-item .portfolio-item-content h3, .portfolio-item .portfolio-item-content p, .blog-item .portfolio-item-content h3, .blog-item .portfolio-item-content p {
   color: #fff;
   margin: 0;
