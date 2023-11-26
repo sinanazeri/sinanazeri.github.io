@@ -676,3 +676,40 @@ var animateReveal = function() {
 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+
+    const professions = ['Data Scientist', 'Researcher', 'Generative AI Specialist'];
+    let currentProfession = 0;
+    let letterCount = 0;
+    let currentText = '';
+    let isDeleting = false;
+    let typingSpeed = 100; // Adjust this for overall speed
+
+    function type() {
+        const current = professions[currentProfession];
+        if (isDeleting) {
+            currentText = current.substring(0, letterCount - 1);
+            typingSpeed = 50; // Speed for deleting, make it faster for smoother transition
+        } else {
+            currentText = current.substring(0, letterCount + 1);
+            typingSpeed = Math.random() * (120 - 80) + 80; // Random typing speed for natural effect
+        }
+
+        document.getElementById('dynamic-text').innerHTML = currentText + '<span class="cursor"></span>';
+
+        if (!isDeleting && letterCount === current.length) {
+            isDeleting = true;
+            typingSpeed = 1000; // Pause before starting to delete, adjust for smoother transition
+        } else if (isDeleting && letterCount === 0) {
+            isDeleting = false;
+            currentProfession = (currentProfession + 1) % professions.length;
+            typingSpeed = 500; // Pause before starting to type next profession
+        }
+
+        letterCount = isDeleting ? letterCount - 1 : letterCount + 1;
+        setTimeout(type, typingSpeed);
+    }
+
+    // Initial delay before starting the animation
+    setTimeout(type, 2000);
+});

@@ -2121,3 +2121,17 @@ span.error {
 .intro-button:hover {
     color: #D63447 !important;
 }
+
+/* Typing effect cursor styles */
+.cursor {
+  font-weight: 100;
+  color: #000; /* Adjust color to match your design */
+  animation: blink 1s infinite;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
